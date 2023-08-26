@@ -4,9 +4,9 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts
 {
 	public class Transaction
 	{
-		[JsonPropertyName("hash")] public string Hash { get; set; }
+		[JsonPropertyName("hash")] public string Hash { get; set; } = default!;
 
-		[JsonPropertyName("block")] public string Block { get; set; }
+		[JsonPropertyName("block")] public string Block { get; set; } = default!;
 
 		[JsonPropertyName("block_height")] public uint BlockHeight { get; set; }
 
@@ -16,11 +16,11 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts
 
 		[JsonPropertyName("index")] public uint Index { get; set; }
 
-		[JsonPropertyName("output_amount")] public Amount[] OutputAmount { get; set; }
+		[JsonPropertyName("output_amount")] public Amount[] OutputAmount { get; set; } = default!;
 
-		[JsonPropertyName("fees")] public string Fees { get; set; }
+		[JsonPropertyName("fees")] public string Fees { get; set; } = default!;
 
-		[JsonPropertyName("deposit")] public string Deposit { get; set; }
+		[JsonPropertyName("deposit")] public string? Deposit { get; set; }
 
 		[JsonPropertyName("size")] public ushort Size { get; set; }
 
