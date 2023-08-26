@@ -8,7 +8,7 @@ public class Block
 
 	[JsonPropertyName("height")] public ulong? Height { get; set; }
 
-	[JsonPropertyName("hash")] public string Hash { get; set; }
+	[JsonPropertyName("hash")] public string Hash { get; set; } = default!;
 
 	[JsonPropertyName("slot")] public ulong? Slot { get; set; }
 
@@ -16,7 +16,7 @@ public class Block
 
 	[JsonPropertyName("epoch_slot")] public uint? EpochSlot { get; set; }
 
-	[JsonPropertyName("slot_leader")] public string SlotLeader { get; set; }
+	[JsonPropertyName("slot_leader")] public string SlotLeader { get; set; } = default!;
 
 	[JsonPropertyName("size")] public uint Size { get; set; }
 

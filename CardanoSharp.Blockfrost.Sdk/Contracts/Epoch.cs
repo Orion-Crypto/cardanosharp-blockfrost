@@ -18,9 +18,9 @@ public class Epoch
 
 	[JsonPropertyName("tx_count")] public uint TxCount { get; set; }
 
-	[JsonPropertyName("output")] public string Output { get; set; }
+	[JsonPropertyName("output")] public string Output { get; set; } = default!;
 
-	[JsonPropertyName("fees")] public string Fees { get; set; }
+	[JsonPropertyName("fees")] public string Fees { get; set; } = default!;
 
-	[JsonPropertyName("active_stake")] public string ActiveStake { get; set; }
+	[JsonPropertyName("active_stake")] public string ActiveStake { get; set; } = default!;
 }

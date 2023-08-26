@@ -5,17 +5,17 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts;
 
 public class AssetDetails
 {
-	[JsonPropertyName("asset")] public string Asset { get; set; }
+	[JsonPropertyName("asset")] public string Asset { get; set; } = default!;
 
-	[JsonPropertyName("policy_id")] public string PolicyId { get; set; }
+	[JsonPropertyName("policy_id")] public string PolicyId { get; set; } = default!;
 
-	[JsonPropertyName("asset_name")] public string? AssetName { get; set; }
+	[JsonPropertyName("asset_name")] public string? AssetName { get; set; } = default!;
 
-	[JsonPropertyName("fingerprint")] public string Fingerprint { get; set; }
+	[JsonPropertyName("fingerprint")] public string Fingerprint { get; set; } = default!;
 
-	[JsonPropertyName("quantity")] public string Quantity { get; set; }
+	[JsonPropertyName("quantity")] public string Quantity { get; set; } = default!;
 
-	[JsonPropertyName("initial_mint_tx_hash")] public string InitialMintTxHash { get; set; }
+	[JsonPropertyName("initial_mint_tx_hash")] public string InitialMintTxHash { get; set; } = default!;
 
 	[JsonPropertyName("mint_or_burn_count")] public uint MintOrBurnCount { get; set; }
 

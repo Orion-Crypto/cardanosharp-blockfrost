@@ -7,7 +7,7 @@ public class AccountDetails
 	/// <summary>
 	/// Bech32 stake address
 	/// </summary>
-	[JsonPropertyName("stake_address")] public string StakeAddress { get; set; }
+	[JsonPropertyName("stake_address")] public string StakeAddress { get; set; } = default!;
 
 	/// <summary>
 	/// Registration state of an account
@@ -22,32 +22,32 @@ public class AccountDetails
 	/// <summary>
 	/// Balance of the account in Lovelaces
 	/// </summary>
-	[JsonPropertyName("controlled_amount")] public string ControlledAmount { get; set; }
+	[JsonPropertyName("controlled_amount")] public string ControlledAmount { get; set; } = default!;
 
 	/// <summary>
 	/// Sum of all rewards for the account in Lovelaces
 	/// </summary>
-	[JsonPropertyName("rewards_sum")] public string RewardsSum { get; set; }
+	[JsonPropertyName("rewards_sum")] public string RewardsSum { get; set; } = default!;
 
 	/// <summary>
 	/// Sum of all the withdrawals for the account in Lovelaces
 	/// </summary>
-	[JsonPropertyName("withdrawals_sum")] public string WithdrawalsSum { get; set; }
+	[JsonPropertyName("withdrawals_sum")] public string WithdrawalsSum { get; set; } = default!;
 
 	/// <summary>
 	/// Sum of all funds from reserves for the account in Lovelaces
 	/// </summary>
-	[JsonPropertyName("reserves_sum")] public string ReservesSum { get; set; }
+	[JsonPropertyName("reserves_sum")] public string ReservesSum { get; set; } = default!;
 
 	/// <summary>
 	/// Sum of all funds from treasury for the account in Lovelaces
 	/// </summary>
-	[JsonPropertyName("treasury_sum")] public string TreasurySum { get; set; }
+	[JsonPropertyName("treasury_sum")] public string TreasurySum { get; set; } = default!;
 
 	/// <summary>
 	/// Sum of available rewards that haven't been withdrawn yet for the account in Lovelaces
 	/// </summary>
-	[JsonPropertyName("withdrawable_amount")] public string WithdrawableAmount { get; set; }
+	[JsonPropertyName("withdrawable_amount")] public string WithdrawableAmount { get; set; } = default!;
 
 	/// <summary>
 	/// Bech32 pool ID that owns the account

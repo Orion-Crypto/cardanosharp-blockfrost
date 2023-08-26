@@ -16,9 +16,9 @@ public class EpochParameters
 
 	[JsonPropertyName("max_block_header_size")] public uint MaxBlockHeaderSize { get; set; }
 
-	[JsonPropertyName("key_deposit")] public string KeyDeposit { get; set; }
+	[JsonPropertyName("key_deposit")] public string KeyDeposit { get; set; } = default!;
 
-	[JsonPropertyName("pool_deposit")] public string PoolDeposit { get; set; }
+	[JsonPropertyName("pool_deposit")] public string PoolDeposit { get; set; } = default!;
 
 	[JsonPropertyName("e_max")] public uint EMax { get; set; }
 
@@ -38,11 +38,11 @@ public class EpochParameters
 
 	[JsonPropertyName("protocol_minor_ver")] public ushort ProtocolMinorVer { get; set; }
 
-	[JsonPropertyName("min_utxo")] public string MinUtxo { get; set; }
+	[JsonPropertyName("min_utxo")] public string MinUtxo { get; set; } = default!;
 
-	[JsonPropertyName("min_pool_cost")] public string MinPoolCost { get; set; }
+	[JsonPropertyName("min_pool_cost")] public string MinPoolCost { get; set; } = default!;
 
-	[JsonPropertyName("nonce")] public string Nonce { get; set; }
+	[JsonPropertyName("nonce")] public string Nonce { get; set; } = default!;
 
 	[JsonPropertyName("cost_models")] public object? CostModels { get; set; }
 

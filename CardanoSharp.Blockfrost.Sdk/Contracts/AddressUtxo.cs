@@ -4,15 +4,15 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts;
 
 public class AddressUtxo
 {
-	[JsonPropertyName("address")] public string Address { get; set; }
+	[JsonPropertyName("address")] public string Address { get; set; } = default!;
 
-	[JsonPropertyName("tx_hash")] public string TxHash { get; set; }
+	[JsonPropertyName("tx_hash")] public string TxHash { get; set; } = default!;
 
 	[JsonPropertyName("output_index")] public ushort OutputIndex { get; set; }
 
-	[JsonPropertyName("amount")] public UnitQuantity[] Amount { get; set; }
+	[JsonPropertyName("amount")] public Amount[] Amount { get; set; } = default!;
 
-	[JsonPropertyName("block")] public string Block { get; set; }
+	[JsonPropertyName("block")] public string Block { get; set; } = default!;
 
 	[JsonPropertyName("data_hash")] public string? DataHash { get; set; }
 

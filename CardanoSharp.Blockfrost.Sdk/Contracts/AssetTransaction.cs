@@ -4,7 +4,7 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts;
 
 public class AssetTransaction
 {
-	[JsonPropertyName("tx_hash")] public string TxHash { get; set; }
+	[JsonPropertyName("tx_hash")] public string TxHash { get; set; } = default!;
 
 	[JsonPropertyName("tx_index")] public uint TxIndex { get; set; }
 

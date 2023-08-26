@@ -7,10 +7,10 @@ public class AccountRegistration
 	/// <summary>
 	/// Hash of the transaction containing the (de)registration certificate
 	/// </summary>
-	[JsonPropertyName("tx_hash")] public string TxHash { get; set; }
+	[JsonPropertyName("tx_hash")] public string TxHash { get; set; } = default!;
 
 	/// <summary>
 	/// Action in the certificate ["registered"/"deregistered"]
 	/// </summary>
-	[JsonPropertyName("action")] public string Action { get; set; }
+	[JsonPropertyName("action")] public string Action { get; set; } = default!;
 }

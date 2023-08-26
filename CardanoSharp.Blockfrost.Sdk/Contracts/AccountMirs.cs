@@ -7,10 +7,10 @@ public class AccountMirs
 	/// <summary>
 	/// Hash of the transaction containing the MIR
 	/// </summary>
-	[JsonPropertyName("tx_hash")] public string TxHash { get; set; }
+	[JsonPropertyName("tx_hash")] public string TxHash { get; set; } = default!;
 
 	/// <summary>
 	/// MIR amount in Lovelaces
 	/// </summary>
-	[JsonPropertyName("amount")] public string Amount { get; set; }
+	[JsonPropertyName("amount")] public string Amount { get; set; } = default!;
 }
