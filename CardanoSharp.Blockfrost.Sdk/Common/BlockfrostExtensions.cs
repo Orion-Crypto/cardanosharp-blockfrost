@@ -13,17 +13,14 @@ public static class BlockfrostExtensions
 		services.AddSingleton(authHeaderConfiguration);
 		services.AddTransient<AuthHeaderHandler>();
 
-		// add all the clients
-		services.AddRefitClient<INetworkClient>()
+		// add all the clients		
+		services.AddRefitClient<IAccountClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
 			.AddHttpMessageHandler<AuthHeaderHandler>();
-		services.AddRefitClient<ITransactionsClient>()
+		services.AddRefitClient<IAddressesClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
 			.AddHttpMessageHandler<AuthHeaderHandler>();
 		services.AddRefitClient<IAssetsClient>()
-			.ConfigureHttpClient(c => c.BaseAddress = uri)
-			.AddHttpMessageHandler<AuthHeaderHandler>();
-		services.AddRefitClient<IScriptsClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
 			.AddHttpMessageHandler<AuthHeaderHandler>();
 		services.AddRefitClient<IBlocksClient>()
@@ -32,14 +29,20 @@ public static class BlockfrostExtensions
 		services.AddRefitClient<IEpochsClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
 			.AddHttpMessageHandler<AuthHeaderHandler>();
-		services.AddRefitClient<IAddressesClient>()
+		services.AddRefitClient<IMempoolClient>()
+			.ConfigureHttpClient(c => c.BaseAddress = uri)
+			.AddHttpMessageHandler<AuthHeaderHandler>();
+		services.AddRefitClient<INetworkClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
 			.AddHttpMessageHandler<AuthHeaderHandler>();
 		services.AddRefitClient<IPoolsClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
 			.AddHttpMessageHandler<AuthHeaderHandler>();
-		services.AddRefitClient<IAccountClient>()
+		services.AddRefitClient<IScriptsClient>()
 			.ConfigureHttpClient(c => c.BaseAddress = uri)
-			.AddHttpMessageHandler<AuthHeaderHandler>();
+			.AddHttpMessageHandler<AuthHeaderHandler>();		
+		services.AddRefitClient<ITransactionsClient>()
+			.ConfigureHttpClient(c => c.BaseAddress = uri)
+			.AddHttpMessageHandler<AuthHeaderHandler>();		
 	}
 }
