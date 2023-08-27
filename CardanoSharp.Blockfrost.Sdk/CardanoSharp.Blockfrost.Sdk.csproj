@@ -3,9 +3,12 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <PackageId>Orion.CardanoSharp.Blockfrost.Sdk</PackageId>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.0.1</Version>
+        <PackageProjectUrl>https://github.com/Orion-Crypto/cardanosharp-blockfrost</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Orion-Crypto/cardanosharp-blockfrost</RepositoryUrl>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <Version>0.0.1</Version>
     </PropertyGroup>
 
     <ItemGroup>
