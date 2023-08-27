@@ -17,36 +17,40 @@ await host.RunAsync();
 
 public class Worker : BackgroundService
 {
-	private readonly INetworkClient _networkClient;
-	private readonly ITransactionsClient _transactionsClient;
+	private readonly IAccountClient _accountClient;
+	private readonly IAddressesClient _addressesClient;
 	private readonly IAssetsClient _assetsClient;
-	private readonly IScriptsClient _scriptsClient;
 	private readonly IBlocksClient _blocksClient;
 	private readonly IEpochsClient _epochsClient;
-	private readonly IAddressesClient _addressesClient;
+	private readonly IMempoolClient _mempoolClient;
+	private readonly INetworkClient _networkClient;
 	private readonly IPoolsClient _poolsClient;
-	private readonly IAccountClient _accountClient;
+	private readonly IScriptsClient _scriptsClient;
+	private readonly ITransactionsClient _transactionsClient;
 
 	public Worker(
-		INetworkClient networkClient,
-		ITransactionsClient transactionsClient,
+		IAccountClient accountClient,
+		IAddressesClient addressesClient,
 		IAssetsClient assetsClient,
-		IScriptsClient scriptsClient,
 		IBlocksClient blocksClient,
 		IEpochsClient epochsClient,
-		IAddressesClient addressesClient,
+		IMempoolClient mempoolClient,
+		INetworkClient networkClient,
 		IPoolsClient poolsClient,
-		IAccountClient accountClient)
+		IScriptsClient scriptsClient,
+		ITransactionsClient transactionsClient
+		)
 	{
-		_networkClient = networkClient;
-		_transactionsClient = transactionsClient;
+		_accountClient = accountClient;
+		_addressesClient = addressesClient;
 		_assetsClient = assetsClient;
-		_scriptsClient = scriptsClient;
 		_blocksClient = blocksClient;
 		_epochsClient = epochsClient;
-		_addressesClient = addressesClient;
+		_mempoolClient = mempoolClient;
+		_networkClient = networkClient;
 		_poolsClient = poolsClient;
-		_accountClient = accountClient;
+		_scriptsClient = scriptsClient;
+		_transactionsClient = transactionsClient;
 	}
 
 	protected override async Task ExecuteAsync(CancellationToken stoppingToken)
