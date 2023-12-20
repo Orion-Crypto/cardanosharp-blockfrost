@@ -21,5 +21,7 @@ public class AssetDetails
 
 	[JsonPropertyName("onchain_metadata")] public JsonElement? OnchainMetadata { get; set; }
 
+	[JsonPropertyName("onchain_metadata_standard")] public string? OnchainMetadataStandard { get; set; }
+
 	[JsonPropertyName("metadata")] public OffchainMetadata? Metadata { get; set; }
 }
