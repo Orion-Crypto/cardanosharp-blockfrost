@@ -2,7 +2,7 @@
 
 namespace CardanoSharp.Blockfrost.Sdk.Contracts
 {
-    public class OffchainMetadata
+    public class OnchainMetadata
     {
         [JsonPropertyName("name")]
         public string? Name { get; set; }
