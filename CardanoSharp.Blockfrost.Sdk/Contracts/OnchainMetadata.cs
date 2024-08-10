@@ -13,6 +13,9 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts
         [JsonPropertyName("ticker")]
         public string? Ticker { get; set; }
 
+        [JsonPropertyName("image")]
+        public string? Image { get; set; }
+
         [JsonPropertyName("url")]
         public string? Url { get; set; }
 
