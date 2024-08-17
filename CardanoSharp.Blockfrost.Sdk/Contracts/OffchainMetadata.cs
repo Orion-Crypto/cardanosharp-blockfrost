@@ -23,6 +23,6 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts
         public string? Logo { get; set; }
 
         [JsonPropertyName("decimals")]
-        public byte? Decimals { get; set; }
+        public object? Decimals { get; set; } // This can be a string or int
     }
 }
