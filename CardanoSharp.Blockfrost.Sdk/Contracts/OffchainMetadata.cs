@@ -8,19 +8,19 @@ namespace CardanoSharp.Blockfrost.Sdk.Contracts
         public string? Name { get; set; }
 
         [JsonPropertyName("description")]
-        public string? Description { get; set; }
+        public object? Description { get; set; }
 
         [JsonPropertyName("ticker")]
         public string? Ticker { get; set; }
 
         [JsonPropertyName("url")]
-        public string? Url { get; set; }
+        public object? Url { get; set; }
 
         [JsonPropertyName("image")]
-        public string? Image { get; set; }
+        public object? Image { get; set; }
 
         [JsonPropertyName("logo")]
-        public string? Logo { get; set; }
+        public object? Logo { get; set; }
 
         [JsonPropertyName("decimals")]
         public object? Decimals { get; set; } // This can be a string or int
